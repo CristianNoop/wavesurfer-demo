@@ -1,4 +1,8 @@
 # wavesurfer-demo
+
+## [Backendi käivitamine](https://github.com/CristianNoop/wavesurfer-demo/tree/master/waveform-player-backend/README.md)  
+## [Frontendi käivitamine](https://github.com/CristianNoop/wavesurfer-demo/tree/master/waveform-player-frontend/README.md)
+
 ## Lisatud funktsionaalsused  
 * Kasutaja saab rakendusse laadida .mp3 faili    
 *	Rakendus loob mp3-st waveformid (eraldi vasak ja parem kanal) ning kuvab neid kasutajale   
