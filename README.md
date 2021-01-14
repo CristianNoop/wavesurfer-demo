@@ -1,4 +1,13 @@
-# wavesurfer-demo
+# Ülesanne – helifaili mängiv ja visualiseeriv rakendus.
+
+## Stack:
+Java, Spring, Maven, Angular, wavesurfer.js, ülejäänu vastavalt enda eelistustele
+
+## Eesmärk:
+Arendada veebirakendus, mis võimaldab kasutajal mängida ja visualiseerida helifaile.  
+Realiseeri MVP täies ulatuses. Eraldi kasutajahaldust ja autentimist vaja arendada ei ole.  
+Täiendavatest funktsionaalsustest tee arendusi vastavalt oma eelistusele vabalt valitud järjekorras. Kui kõike ei jõua ole valmis ka selgitama, miks ühte või teist täiendavat funktsionaalsust realiseerisid/ei realiseerinud. Proovi ka MVP-d realiseerides juba mõelda sellele, kuidas rakendust ehitada nii, et hiljem täiendavate funktsionaalsuste lisamine raskusi ei valmistaks.  
+
 
 ## [Backendi käivitamine](https://github.com/CristianNoop/wavesurfer-demo/tree/master/waveform-player-backend/README.md)  
 ## [Frontendi käivitamine](https://github.com/CristianNoop/wavesurfer-demo/tree/master/waveform-player-frontend/README.md)
