@@ -1,0 +1,98 @@
+<div class="container">
+    <div class="row" id="playerRow">
+        <div class="playerContainer">
+            <input type="file" id="inputFile" (change)="fileChangeEvent($event)"/>
+            <div class="waveformContainer" id="waveform"></div>
+                <div id="timeline"></div>
+            </div>
+            <div class="column" id="sliderControllers">
+                <label>Volume</label>
+                
+                <div class="row">
+                    <div class="column">
+                        <label>L</label>
+                        <mat-slider  min="0" max="100" value="50" class="slider" id="volumeLeft" 
+                            value="100" thumbLabel=true vertical=true (input)="onLeftVolumeChange($event)">
+                        </mat-slider>
+                    </div>
+                    <div class="column">
+                        <label>R</label>
+                        <mat-slider  min="0" max="100" value="50" class="slider" id="volumeRight" value="100" 
+                            thumbLabel=true vertical=true (input)="onRightVolumeChange($event)">
+                        </mat-slider>
+                    </div>
+                </div>
+                <label>Speed</label>
+                <div class="speedSlider">
+                    <mat-slider min="0.25" max="2" step="0.25" value="1" vertical:true (input)="onPlaybackSpeedChangeEvent($event)"></mat-slider>
+                    <label>{{playbackSpeed}}x</label>
+                </div>
+            </div>
+        </div>    
+
+    <div class="column">
+        <div id="playerTime">
+            <label #currentTime>00:00</label>
+            <a>/</a>
+            <label #totalTime>00:00</label>
+        </div>
+        <div class="row" id="controls">
+            <button (click)="skipBackward()">
+                <fa-icon [icon]="faStepBackward"></fa-icon>
+            </button>
+            <button (click)="togglePlay()">
+                <fa-icon [icon]="faPlay"></fa-icon>
+            </button>
+            <button (click)="togglePause()">
+                <fa-icon [icon]="faPause"></fa-icon>
+            </button>
+            <button (click)="stopPlayback()">
+                <fa-icon [icon]="faStop"></fa-icon>
+            </button>
+            <button (click)="skipForward()">
+                <fa-icon [icon]="faStepForward"></fa-icon>
+            </button>
+        </div>
+    </div>
+    
+    <div class="panel panel-default" [hidden]="!showComments">
+        <div class="panel-heading">
+            <div class="checkbox">
+                <label>
+                    <input #loopCheckbox type="checkbox" (change)="toggleLoopRegion($event)"> Loop region
+                </label>
+            </div>
+            <p class="lead">Comments</p>
+        </div>
+        <div class="panel-body">
+            <div id="commentsContent">
+                <textarea #commentInput class="form-control" id="newcont" rows="5" placeholder="Add comments.." (input)="onCommentsChange()"></textarea>
+            </div>
+        </div>
+      </div>
+</div>
+
+<table class="table table-bordered table-striped">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">File Name</th>
+        <th scope="col">Filesize</th>
+        <th scope="col">Play</th>
+        <th scope="col">Delete</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let file of fileList">
+        <td>{{ file.name }}</td>
+        <td>{{ file.size }}MB</td>
+        <td><button (click)="loadFile(file.name)"><fa-icon [icon]="faPlay"></fa-icon></button></td>
+        <td><button (click)="deleteFile(file)"><fa-icon [icon]="faTrash"></fa-icon></button></td>
+      </tr>
+      <tr>
+          <td colspan=4>
+            <input class="centered" type="file" id="inputFile" (change)="fileUploadEvent($event)"/>
+          </td>
+          
+      </tr>
+    </tbody>
+</table>

@@ -1,0 +1,49 @@
+.waveformContainer {
+    position: relative;
+}
+
+#playerRow {
+    background-color: gainsboro;
+    border-radius: 10px;
+}
+
+.centered {
+    margin: auto;
+}
+  
+.container {
+    display: flex;
+    flex-direction: column;
+    padding-top: 50px;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    align-self: center;
+    width: 100%;
+    justify-content: center;
+}
+
+#playerTime {
+    margin-bottom: auto;
+    margin-top: auto;
+}
+
+
+.playerContainer {
+    width: 75%;
+    overflow: hidden;
+    align-self: center;
+}
+
+.column {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.speedSlider {
+    padding-top: 0;
+}
