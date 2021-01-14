@@ -32,4 +32,6 @@ Täiendavatest funktsionaalsustest tee arendusi vastavalt oma eelistusele vabalt
 ## Lisamata funktsionaalsused
 *	Kasutaja peab saama kasutada ekvalaiseri funktsionaalsust  - AJA TÕTTU LISAMATA  
 *	Kasutajale kuvatakse waveforme korraga nii täispikkuses (kui nt helifail on 5min pikk, siis kuvatakse ka waveform terve 5m osas), kui hetkel mängitava koha lähedalt (nt üks 20s waveformi tükk korraga, selle lõppemisel järgmine 20s) - AJA TÕTTU LISAMATA  
+    * Lisa waveformi mängitava koha lähedalt kuvamisele funktsionaalsus, kus kuvatakse mängitav hetk -10s ja +10s ehk et waveform jookseb mängimisega kaasa. Arvesta ka edge case-dega, mida see kaasa võib tuua.  
+    * Lisa wavformi mängitava koha lähedalt kuvamisele zoomi funktsionaalsus. Ehk kasutaja saab „zoomida“ sisse ja välja, mille tulemusel lähedalt kuvamise ajaraam muutub 20s-lt vastavalt kas lühemaks või pikemaks.
 * Failide streamimine - failide streamimine toimib, aga lõhub ära pleieri kerimise funktisonaalsused. Aja tõttu probleem lahendamata ja implementeerimata.
